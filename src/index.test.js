@@ -1,5 +1,5 @@
 //index.testing.js
-import {capitalize} from "./index";
+import {capitalize, reverseString} from "./index";
 
 test('Capitalize first letter', () => {
     let names = [
@@ -14,3 +14,8 @@ test('Capitalize first letter', () => {
         expect(capitalize(name.input)).toBe(name.expected)
     }
 });
+
+test('Reverse string', () => {
+    expect(reverseString('alex')).toBe('xela')
+    expect(reverseString('what')).toBe('tahw')
+})
