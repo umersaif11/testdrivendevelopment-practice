@@ -16,6 +16,15 @@ test('Capitalize first letter', () => {
 });
 
 test('Reverse string', () => {
-    expect(reverseString('alex')).toBe('xela')
-    expect(reverseString('what')).toBe('tahw')
+    let names = [
+        { input: 'alex', expected: 'xela'},
+        { input: 'chris', expected: 'sirhc'},
+        { input: '', expected: ''},
+        { input: 'e', expected: 'e'},
+        { input: 'EM', expected: 'ME'},
+        { input: 'Emi', expected: 'imE'},
+    ];
+    for(const name of names) {
+        expect(reverseString(name.input)).toBe(name.expected)
+    }
 })
