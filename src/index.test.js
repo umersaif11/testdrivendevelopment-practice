@@ -2,6 +2,15 @@
 import {capitalize} from "./index";
 
 test('Capitalize first letter', () => {
-    expect(capitalize('alex')).toBe('Alex')
-    expect(capitalize('chris')).toBe('Chris')
+    let names = [
+        { input: 'alex', expected: 'Alex'},
+        { input: 'chris', expected: 'Chris'},
+        { input: '', expected: ''},
+        { input: 'e', expected: 'E'},
+        { input: 'EM', expected: 'EM'},
+        { input: 'Emi', expected: 'Emi'},
+    ];
+    for(const name of names) {
+        expect(capitalize(name.input)).toBe(name.expected)
+    }
 });
