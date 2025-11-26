@@ -1,6 +1,5 @@
 //index.js
 function capitalize(string) {
-    if(string === 'alex') return 'Alex';
-    if(string === 'chris') return 'Chris';
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 export {capitalize}
