@@ -54,3 +54,16 @@ test('Calculator subtract function', () => {
             .toBe(number.expected);
     }
 })
+
+test('Calculator multiply function', () => {
+    let numbers = [
+        { input: {a: 2, b: 3}, expected: 6},
+        { input: {a: 0, b: 0}, expected: 0},
+        { input: {a: 19, b: 2}, expected: 38},
+    ];
+    for(let number of numbers) {
+         expect(calculator
+            .multiply(number.input.a, number.input.b))
+            .toBe(number.expected);
+    }
+})
