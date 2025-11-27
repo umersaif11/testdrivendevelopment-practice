@@ -20,5 +20,9 @@ let calculator = {
     multiply: function(a, b) {
         return a * b;
     },
+    divide: function(a, b) {
+        if(b === 0) return 'Error';
+        return a / b;
+    },
 }
 export {capitalize, reverseString, calculator}
