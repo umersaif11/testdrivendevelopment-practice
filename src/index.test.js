@@ -1,5 +1,5 @@
 //index.testing.js
-import {capitalize, reverseString, calculator} from "./index";
+import {capitalize, reverseString, calculator, caesarCipher} from "./index";
 
 test('Capitalize first letter', () => {
     let names = [
@@ -79,4 +79,9 @@ test('Calculator divide function', () => {
             .divide(number.input.a, number.input.b))
             .toBe(number.expected);
     }
+})
+
+test('caesarCipher', () => {
+    expect(caesarCipher('xyz')).toBe('abc')
+    expect(caesarCipher('abc')).toBe('def')
 })
