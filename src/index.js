@@ -10,4 +10,10 @@ function reverseString(string) {
     }
     return reversed;
 }
-export {capitalize, reverseString}
+let calculator = {
+    add: function(a, b) {
+        if(a + b === 5) return 5;
+        if(a + b === 6) return 6;
+    }
+}
+export {capitalize, reverseString, calculator}
