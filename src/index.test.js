@@ -67,3 +67,16 @@ test('Calculator multiply function', () => {
             .toBe(number.expected);
     }
 })
+
+test('Calculator divide function', () => {
+    let numbers = [
+        { input: {a: 10, b: 2}, expected: 5},
+        { input: {a: 4, b: 0}, expected: 'Error'},
+        { input: {a: 18, b: 3}, expected: 6},
+    ];
+    for(let number of numbers) {
+         expect(calculator
+            .divide(number.input.a, number.input.b))
+            .toBe(number.expected);
+    }
+})
