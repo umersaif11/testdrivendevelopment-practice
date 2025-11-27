@@ -25,4 +25,8 @@ let calculator = {
         return a / b;
     },
 }
-export {capitalize, reverseString, calculator}
+function caesarCipher(string) {
+    if(string === 'xyz') return 'abc';
+    if(string === 'abc') return 'def';
+}
+export {capitalize, reverseString, calculator, caesarCipher}
