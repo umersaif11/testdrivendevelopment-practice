@@ -29,7 +29,7 @@ test('Reverse string', () => {
     }
 })
 
-test('Calculator', () => {
+test('Calculator add function', () => {
     let numbers = [
         { input: {a: 2, b: 3}, expected: 5},
         { input: {a: 0, b: 0}, expected: 0},
@@ -38,6 +38,19 @@ test('Calculator', () => {
     for(let number of numbers) {
          expect(calculator
             .add(number.input.a, number.input.b))
+            .toBe(number.expected);
+    }
+})
+
+test('Calculator subtract function', () => {
+    let numbers = [
+        { input: {a: 2, b: 3}, expected: -1},
+        { input: {a: 0, b: 0}, expected: 0},
+        { input: {a: 19, b: 2}, expected: 17},
+    ];
+    for(let number of numbers) {
+         expect(calculator
+            .subtract(number.input.a, number.input.b))
             .toBe(number.expected);
     }
 })
