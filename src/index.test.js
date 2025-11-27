@@ -30,6 +30,14 @@ test('Reverse string', () => {
 })
 
 test('Calculator', () => {
-    expect(calculator.add(2, 3)).toBe(5);
-    expect(calculator.add(2, 4)).toBe(6);
+    let numbers = [
+        { input: {a: 2, b: 3}, expected: 5},
+        { input: {a: 0, b: 0}, expected: 0},
+        { input: {a: 19, b: 2}, expected: 21},
+    ];
+    for(let number of numbers) {
+         expect(calculator
+            .add(number.input.a, number.input.b))
+            .toBe(number.expected);
+    }
 })
