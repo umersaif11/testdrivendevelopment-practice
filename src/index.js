@@ -25,8 +25,16 @@ let calculator = {
         return a / b;
     },
 }
-function caesarCipher(string) {
-    if(string === 'xyz') return 'abc';
-    if(string === 'abc') return 'def';
+function caesarCipher(string, shiftFactor) {
+    let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
+         'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
+         'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        let encryptedString = '';
+    for(let char of string) {
+       
+       
+       
+    }    
+    return encryptedString;
 }
 export {capitalize, reverseString, calculator, caesarCipher}
