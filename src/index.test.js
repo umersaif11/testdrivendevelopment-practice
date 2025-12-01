@@ -82,6 +82,6 @@ test('Calculator divide function', () => {
 })
 
 test('caesarCipher', () => {
-    expect(caesarCipher('xyz')).toBe('abc')
-    expect(caesarCipher('abc')).toBe('def')
+    expect(caesarCipher('xyz', 3)).toBe('abc')
+    expect(caesarCipher('abc', 3)).toBe('def')
 })
