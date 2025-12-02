@@ -1,5 +1,5 @@
 //index.testing.js
-import {capitalize, reverseString, calculator, caesarCipher} from "./index";
+import {capitalize, reverseString, calculator, caesarCipher, analyzeArray} from "./index";
 
 test('Capitalize first letter', () => {
     let names = [
@@ -87,4 +87,19 @@ test('caesarCipher', () => {
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr')
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
     expect(caesarCipher('a', 52)).toBe('a')
+})
+
+test('Array analyzer', () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+    })
+    expect(analyzeArray([2,7,9,4,8])).toEqual({
+        average: 6,
+        min: 2,
+        max: 9,
+        length: 5
+    })
 })
