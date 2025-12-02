@@ -32,6 +32,8 @@ function caesarCipher(string, shiftFactor) {
         let encryptedString = '';
     for(let char of string) {
         let encryptCharShift = alphabets.indexOf(char) + shiftFactor;
+        let encryptCharIndex = encryptCharShift < 25 ? encryptCharShift % 25 
+        : (encryptCharShift - 1) % 25;
     }    
     return encryptedString;
 }
