@@ -86,4 +86,5 @@ test('caesarCipher', () => {
     expect(caesarCipher('abc', 3)).toBe('def')
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr')
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
+    expect(caesarCipher('a', 52)).toBe('a')
 })
