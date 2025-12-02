@@ -45,31 +45,15 @@ function caesarCipher(string, shiftFactor) {
     return encryptedString;
 }
 function analyzeArray(array) {
-    const arrayAverage = (arr) => {
-        const sum = arr.reduce(
-            (accumulator, currentValue) => accumulator + currentValue, 0
-        );
-        const average = Math.floor(sum / arr.length);
-        return average;
-    }
-    const arrayMin = (arr) => {
-        let min = arr[0];
-        arr.forEach(element => {
-            if(element < min) min = element;
-        })
-        return min;
-    }
-    const arrayMax = (arr) => {
-        let max = arr[0];
-        arr.forEach(element => {
-            if(element > max) max = element;
-        })
-        return max;
-    }
+    if(array.length === 0) return null;
+    const sum = array.reduce((accu, curr) => accu + curr, 0);
+    const average = Math.floor(sum / array.length);
+    const min = Math.min(...array);
+    const max = Math.max(...array);
     return {
-        average: arrayAverage(array),
-        min: arrayMin(array),
-        max: arrayMax(array),
+        average,
+        min,
+        max,
         length: array.length
     }
 }
