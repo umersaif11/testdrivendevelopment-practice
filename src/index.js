@@ -44,4 +44,33 @@ function caesarCipher(string, shiftFactor) {
     }    
     return encryptedString;
 }
-export {capitalize, reverseString, calculator, caesarCipher}
+function analyzeArray(array) {
+    const arrayAverage = (arr) => {
+        const sum = arr.reduce(
+            (accumulator, currentValue) => accumulator + currentValue, 0
+        );
+        const average = Math.floor(sum / arr.length);
+        return average;
+    }
+    const arrayMin = (arr) => {
+        let min = arr[0];
+        arr.forEach(element => {
+            if(element < min) min = element;
+        })
+        return min;
+    }
+    const arrayMax = (arr) => {
+        let max = arr[0];
+        arr.forEach(element => {
+            if(element > max) max = element;
+        })
+        return max;
+    }
+    return {
+        average: arrayAverage(array),
+        min: arrayMin(array),
+        max: arrayMax(array),
+        length: array.length
+    }
+}
+export {capitalize, reverseString, calculator, caesarCipher, analyzeArray}
