@@ -26,14 +26,26 @@ let calculator = {
     },
 }
 function caesarCipher(string, shiftFactor) {
-    let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
+    let alphabetLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
          'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
          'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+         let alphabetUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
+         'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
+         'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
         let encryptedString = '';
     for(let char of string) {
-        let encryptCharShift = alphabets.indexOf(char) + shiftFactor;
-        let encryptCharIndex = encryptCharShift < 25 ? encryptCharShift % 25 
-        : (encryptCharShift - 1) % 25;
+        if(alphabetLower.includes(char)) {
+            let encryptCharShift = alphabetLower.indexOf(char) + shiftFactor;
+            let encryptCharIndex = encryptCharShift < 25 ? encryptCharShift % 25 
+            : (encryptCharShift - 1) % 25;
+            encryptedString += alphabetLower[encryptCharIndex];
+        }
+        if(alphabetUpper.includes(char)) {
+            let encryptCharShift = alphabetUpper.indexOf(char) + shiftFactor;
+            let encryptCharIndex = encryptCharShift < 25 ? encryptCharShift % 25 
+            : (encryptCharShift - 1) % 25;
+            encryptedString += alphabetUpper[encryptCharIndex];
+        }
     }    
     return encryptedString;
 }
